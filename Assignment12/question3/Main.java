@@ -1,0 +1,18 @@
+// Name: Geetanjali, rollno: 2510303208, id: BCS2025554, Assignment: Experiment 12, Task: Task 3
+class Main {
+    public static void main(String[] args) {
+        int[] a = {6, 5, 4, 3, 2, 1};
+        int shifts = 0;
+        for (int i = 1; i < a.length; i++) {
+            int key = a[i];
+            int j = i - 1;
+            while (j >= 0 && a[j] > key) {
+                a[j + 1] = a[j];
+                j--;
+                shifts++;
+            }
+            a[j + 1] = key;
+        }
+        System.out.println("Shifts: " + shifts);
+    }
+}
